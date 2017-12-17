@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-RUN mkdir logs 
-RUN apk update && apk add bash && apk add supervisor && \
+RUN mkdir logs && \
+    apk update && apk add bash && apk add supervisor && \
     wget "http://apache.cu.be/kafka/1.0.0/kafka_2.11-1.0.0.tgz" && \
     tar xvzf kafka_2.11-1.0.0.tgz && rm kafka_2.11-1.0.0.tgz
 COPY supervisord.conf /app/supervisord.conf
