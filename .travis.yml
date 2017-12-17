@@ -6,7 +6,7 @@ before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 script:
   - cd context
-  - docker build -t robisrob/kafka-for-dev:$TRAVIS_BUILD_NUMBER .
+  - docker build -t robisrob/kafka-for-dev:$TRAVIS_BUILD_NUMBER -t robisrob/kafka-for-dev:latest .
   - docker push robisrob/kafka-for-dev:$TRAVIS_BUILD_NUMBER
   - docker push robisrob/kafka-for-dev:latest
 
