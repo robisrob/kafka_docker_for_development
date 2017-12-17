@@ -5,7 +5,7 @@ services:
 before_script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 script:
-  - docker build -t robisrob/kafka-for-dev
+  - docker build -t robisrob/kafka-for-dev:$TRAVIS_BUILD_NUMBER
   - docker push robisrob/kafka-for-dev:$TRAVIS_BUILD_NUMBER
   - docker push robisrob/kafka-for-dev:latest
 
