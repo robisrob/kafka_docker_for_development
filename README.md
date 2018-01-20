@@ -35,7 +35,7 @@ Run Zookeeper on port 2182
 docker run -p 2182:2181 -p 9092:9092 robisrob/kafka-for-development:version
 ```
 
-## Change the kafka advertised host
+## Change the Kafka advertised host
 The default value is 127.0.0.1 
 
 If you want to change this you can pass another value as an environment variable
