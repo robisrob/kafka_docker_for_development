@@ -6,7 +6,7 @@ The services are started as explained in the quickstart of [Kafka]
 (https://kafka.apache.org/quickstart)
 
 ## Building image
-docker build -t robisrob/kafka-for-dev:version
+docker build -t robisrob/kafka-for-dev:version .
 
 ## This image is pushed to Docker Hub 
 [https://hub.docker.com/r/robisrob/kafka-for-dev/](https://hub.docker.com/r/robisrob/kafka-for-dev/)
