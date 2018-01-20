@@ -2,8 +2,7 @@
 ## Purpose
 Docker image to easily creating a container with Kafka and Zookeeper running in it, that you can use for development.
 
-The services are started as explained in the quickstart of [Kafka]
-(https://kafka.apache.org/quickstart)
+The services are started as explained in the quickstart of [Kafka](https://kafka.apache.org/quickstart)
 
 ## Building image
 ```
