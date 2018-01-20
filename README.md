@@ -35,19 +35,12 @@ Run Zookeeper on port 2182
 docker run -p 2182:2181 -p 9092:9092 robisrob/kafka-for-development:version
 ```
 
-## Change the Kafka advertised host
-The default value is 127.0.0.1 
-
-If you want to change this you can pass another value as an environment variable
-```
-docker run -p 2181:2181 -p 9092:9092 -e KAFKA_ADVERTISED_HOST=192.168.1.1 robisrob/kafka-for-development:version
-```
 ## Inspect topics
 Using the following command you can step into a running container:
 ```
 docker exec -it name_running_container /bin/bash
 ```
-You can find all the standard kafka scripts in the folder /app/kafka_2.10-0.8.2.2/bin/
+You can find all the standard kafka scripts in the folder /app/kafka_2.11-0.10.1.1/bin/
 
 In the folder /app/utils (that is also added to the PATH) we added some convenience scripts. You can run the following commands.
 ```

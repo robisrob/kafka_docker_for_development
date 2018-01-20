@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-sed -i "s/port=9092/port=$KAFKA_PORT/" /app/kafka_2.10-0.8.2.2/config/server.properties
-sed -i "s/#host.name=localhost/advertised.host.name=$KAFKA_ADVERTISED_HOST/" /app/kafka_2.10-0.8.2.2/config/server.properties
+sed -i "s/#listeners=PLAINTEXT:\/\/:9092/listeners=PLAINTEXT:\/\/0.0.0.0:$KAFKA_PORT/" /app/kafka_2.11-0.10.1.1/config/server.properties
+sed -i "s/#advertised.listeners=PLAINTEXT:\/\/your.host.name:9092/advertised.listeners=PLAINTEXT:\/\/127.0.0.1:$KAFKA_PORT/" /app/kafka_2.11-0.10.1.1/config/server.properties
+
+

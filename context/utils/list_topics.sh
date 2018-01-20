@@ -1,7 +1,6 @@
-
 #!/usr/bin/env bash
 
-/app/kafka_2.10-0.8.2.2/bin/kafka-topics.sh --list --zookeeper localhost:2181
+/app/kafka_2.11-0.10.1.1/bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 
 
