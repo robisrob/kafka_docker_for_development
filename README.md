@@ -6,7 +6,7 @@ The services are started as explained in the quickstart of [Kafka](https://kafka
 
 ## Building image
 ```
-docker build -t robisrob/kafka-for-dev:version .
+docker build -t robisrob/kafka-for-development:version .
 ```
 
 ## This image is automatically build in Docker Hub 
@@ -41,4 +41,24 @@ The default value is 127.0.0.1
 If you want to change this you can pass another value as an environment variable
 ```
 docker run -p 2181:2181 -p 9092:9092 -e KAFKA_ADVERTISED_HOST=192.168.1.1 robisrob/kafka-for-development:version
+```
+## Inspect topics
+Using the following command you can step into a running container:
+```
+docker exec -it name_running_container /bin/bash
+```
+You can find all the standard kafka scripts in the folder /app/kafka_2.10-0.8.2.2/bin/
+
+In the folder /app/utils (that is also added to the PATH) we added some convenience scripts. You can run the following commands.
+```
+list_topics.sh
+```
+```
+describe_topic.sh topic_name
+```
+```
+produce_topic.sh topic_name
+```
+```
+consume_topic.sh topic_name
 ```
