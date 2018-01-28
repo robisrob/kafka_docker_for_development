@@ -55,3 +55,6 @@ produce_topic.sh topic_name
 ```
 consume_topic.sh topic_name
 ```
+```
+get_offset_consumergroup.sh consumergroup_name
+```
