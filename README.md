@@ -44,6 +44,7 @@ docker run -p 2181:2181 -p 9092:9092 -e KAFKA_ADVERTISED_HOST=192.168.1.1 sparkc
 ```
 ## Inspect topics
 Using the following command you can step into a running container:
+
 ```
 docker exec -it name_running_container /bin/bash
 ```
