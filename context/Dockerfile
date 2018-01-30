@@ -6,7 +6,9 @@ ENV PATH="/app/utils:${PATH}"
 COPY utils/ /app/utils/
 COPY supervisord.conf /app/supervisord.conf
 COPY configureKafka.sh /app/configureKafka.sh
+COPY startKafkaWithDelay.sh /app/startKafkaWithDelay.sh
 RUN chmod a+x /app/configureKafka.sh && \ 
+    chmod a+x /app/startKafkaWithDelay.sh && \
     chmod a+x /app/utils/* && \ 
     mkdir logs && \
     apk update && apk add bash && apk add libc6-compat && apk add supervisor && \
