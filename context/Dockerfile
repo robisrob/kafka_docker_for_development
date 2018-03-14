@@ -1,6 +1,7 @@
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 ENV KAFKA_PORT 9092
+ENV KAFKA_HOST 127.0.0.1
 ENV PATH="/app/utils:${PATH}"
 COPY utils/ /app/utils/
 COPY supervisord.conf /app/supervisord.conf
