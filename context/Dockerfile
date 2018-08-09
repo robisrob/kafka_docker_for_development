@@ -14,6 +14,8 @@ RUN chmod a+x /app/configureKafka.sh && \
     chmod a+x /app/utils/* && \ 
     mkdir logs && \
     apk update && apk add bash && apk add libc6-compat && apk add supervisor && \
-    wget "https://archive.apache.org/dist/kafka/1.0.1/kafka_2.11-1.0.1.tgz" && \
-    tar xvzf kafka_2.11-1.0.1.tgz && rm kafka_2.11-1.0.1.tgz
+    wget "https://archive.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz" && \
+    tar xvzf kafka_2.11-1.1.0.tgz && rm kafka_2.11-1.1.0.tgz
 CMD /usr/bin/supervisord -c /app/supervisord.conf
+
+https://archive.apache.org/dist/kafka/1.1.0/
