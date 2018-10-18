@@ -68,7 +68,7 @@ Using the following command you can step into a running container:
 ```
 docker exec -it name_running_container /bin/bash
 ```
-You can find all the standard kafka scripts in the folder /app/kafka_2.11-1.0.1/bin/
+You can find all the standard kafka scripts in the folder /app/kafka/bin/
 
 In the folder /app/utils (that is also added to the PATH) we added some convenience scripts. You can run the following commands.
 ```
